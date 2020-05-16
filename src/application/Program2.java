@@ -25,11 +25,16 @@ public class Program2 {
         System.out.println("Done!! update complete");
         
 		System.out.println("\n=== teste 3: department delete ===");
-		System.out.print("Enter with a id to delete: ");
-		int id = sc.nextInt();
-		departmentDao.deleteById(id);
-		System.out.println("Done, " + id + " deleted");
+		
+		
+		System.out.println("Done, deleted");
         
+		
+		System.out.println("\n=== teste 4: find department by id ===");
+        System.out.print("enter with a id to find");
+        int id = sc.nextInt();
+        Department dep = departmentDao.findById(id);
+        System.out.println(dep);
 	}
 
 }
