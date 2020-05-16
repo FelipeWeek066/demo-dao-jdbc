@@ -1,10 +1,10 @@
 package application;
 
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
-import model.dao.impl.DepartmentDaoJDBC;
 import model.entities.Department;
 
 public class Program2 {
@@ -31,10 +31,14 @@ public class Program2 {
         
 		
 		System.out.println("\n=== teste 4: find department by id ===");
-        System.out.print("enter with a id to find");
-        int id = sc.nextInt();
-        Department dep = departmentDao.findById(id);
-        System.out.println(dep);
+        
+		System.out.println("\n=== teste 5: find all departments ===");
+        
+		List<Department> dep = departmentDao.findAll();
+        
+		for(Department obj : dep) {
+			System.out.println(obj);
+		}
 	}
 
 }
