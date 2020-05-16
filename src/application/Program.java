@@ -51,6 +51,10 @@ public class Program {
         sellerDao.deleteById(id);
         System.out.println("Delete Completed!");
         
+		System.out.println("\n=== teste 7: department insert ===");
+
+        
+        
         sc.close();
 	}
 
